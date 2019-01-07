@@ -1,0 +1,56 @@
+.jumbotron-background {
+    background-image: url("../images/crystals-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.all-background-color {
+    background-image: url("../images/game-background.jpeg");
+}
+
+.jumbotron-background {
+    font-weight: 100;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.score-background {
+    background-color: #eeeeee;
+    min-height: 200px;
+}
+
+.font-25 {
+    font-size: 25px;
+}
+
+.crystal1-background {
+    background-image: url("../images/crystal1.jpg");
+    min-height: 300px;
+    min-width: 379px;
+}
+
+.crystal2-background {
+    background-image: url("../images/crystal2.jpg");
+    min-height: 300px;
+}
+
+.crystal3-background {
+    background-image: url("../images/crystal3.jpg");
+    min-height: 300px;
+}
+
+.crystal4-background {
+    background-image: url("../images/crystal4.jpg");
+    min-height: 300px;
+}
+
+.border-3 {
+    border-width: 3px !important;
+    border-color: black !important;
+}
+
+.button-width {
+    max-width: 25%;
+}
