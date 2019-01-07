@@ -46,6 +46,9 @@ function initializeGame () {
         crystalThreeValue = 2;
         crystalFourValue = 1;
     }
+
+    $("#wins").text(wins);
+    $("#losses").text(losses);
 }
 
 $(document).ready(function() {
