@@ -51,34 +51,47 @@ function initializeGame () {
     $("#losses").text(losses);
 }
 
-$(document).ready(function() {
-    initializeGame();
-
-    $(document).on("click", "#crystal1", function(){
-        currentScore = currentScore + crystalOneValue;
-        $("#current-score").text(currentScore);
-    })
-    
-    $(document).on("click", "#crystal2", function(){
-        currentScore = currentScore + crystalTwoValue;
-        $("#current-score").text(currentScore);
-    })
-    
-    $(document).on("click", "#crystal3", function(){
-        currentScore = currentScore + crystalThreeValue;
-        $("#current-score").text(currentScore);
-    })
-    
-    $(document).on("click", "#crystal4", function(){
-        currentScore = currentScore + crystalFourValue;
-        $("#current-score").text(currentScore);
-    })
-    
+function evaluateWinLoss() {
     if (currentScore === currentTargetScore) {
         alert("Congrats, you won!!!");
         wins++;
         $("#wins").text(wins);
         initializeGame();
     }
+
+    if (currentScore > currentTargetScore) {
+        alert("Sorry, you lost :(");
+        losses++;
+        $("#losses").text(losses);
+        initializeGame();
+    }
+}
+
+$(document).ready(function() {
+    initializeGame();
+
+    $(document).on("click", "#crystal1", function(){
+        currentScore = currentScore + crystalOneValue;
+        $("#current-score").text(currentScore);
+        evaluateWinLoss();
+    })
+    
+    $(document).on("click", "#crystal2", function(){
+        currentScore = currentScore + crystalTwoValue;
+        $("#current-score").text(currentScore);
+        evaluateWinLoss();
+    })
+    
+    $(document).on("click", "#crystal3", function(){
+        currentScore = currentScore + crystalThreeValue;
+        $("#current-score").text(currentScore);
+        evaluateWinLoss();
+    })
+    
+    $(document).on("click", "#crystal4", function(){
+        currentScore = currentScore + crystalFourValue;
+        $("#current-score").text(currentScore);
+        evaluateWinLoss();
+    })
 })
 
